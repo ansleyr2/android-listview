@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Assignment2</string>
+    <string name="rotate">Rotate</string>
+    <string name="flip">Flip</string>
+    <string name="addFact">Add Fact</string>
+    <string name="nextFact">Next Fact</string>
+    <string name="deleteFact">Delete Fact</string>
+
+</resources>

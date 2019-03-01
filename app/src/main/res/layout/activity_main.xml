@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<fragment xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--class="com.example.assignment2.AnimalDisplayFragment"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"/>-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="5"
+    >
+
+    <RelativeLayout
+        android:id="@+id/listRelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/addFactRelativeLayout"
+        >
+
+        <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:cacheColorHint="@android:color/transparent"
+            android:listSelector="@android:color/transparent">
+
+        </ListView>
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/addFactRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:layout_above="@id/buttonsLayout">
+
+        <Button
+            android:id="@+id/addFact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addFact"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"/>
+
+        <EditText
+            android:id="@+id/factText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/addFact"
+            android:layout_alignBottom="@id/addFact"
+            android:layout_marginRight="10dp"/>
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        >
+        <Button
+            android:id="@+id/rotate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="3dp"
+            android:text="@string/rotate"/>
+        <Button
+            android:id="@+id/flip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/rotate"
+            android:layout_centerVertical="true"
+            android:text="@string/flip"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentEnd="true">
+            <ImageView
+                android:id="@+id/left"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="3dp"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                android:layout_centerVertical="true"/>
+            <ImageView
+                android:id="@+id/up"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="3dp"
+                android:layout_toEndOf="@id/left"
+                android:layout_above="@id/left"
+                android:src="@drawable/ic_arrow_upward_black_24dp" />
+            <ImageView
+                android:id="@+id/down"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_toEndOf="@id/left"
+                android:layout_below="@id/left"
+                android:src="@drawable/ic_arrow_downward_black_24dp"/>
+            <ImageView
+                android:id="@+id/right"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_toEndOf="@id/up"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_forward_black_24dp" />
+            <ImageView
+                android:id="@+id/center"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_filter_center_focus_black_24dp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
